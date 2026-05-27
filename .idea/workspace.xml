@@ -34,14 +34,87 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="N6MGHgtc" />
   </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.9983551395218955" />
+      <entry key="MS500" value="3.6213851948227" />
+      <entry key="S2" value="6.342970534057372" />
+      <entry key="S5" value="11.715780490166505" />
+      <entry key="S10" value="18.37308519040419" />
+      <entry key="S30" value="27.9602389000516" />
+      <entry key="S60" value="31.607688610356394" />
+      <entry key="M2" value="33.726179283844196" />
+      <entry key="M5" value="37.084869707582975" />
+      <entry key="M10" value="45.755101965586746" />
+      <entry key="M15" value="53.34652167587337" />
+      <entry key="M30" value="66.41034519423373" />
+      <entry key="H1" value="76.16370190473727" />
+      <entry key="H2" value="82.14125820544267" />
+      <entry key="H4" value="85.4527094505397" />
+      <entry key="D1" value="88.39170266024963" />
+      <entry key="W1" value="88.9126725334866" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.447050872055007E-207" />
+      <entry key="S5" value="1.8373568791567694E-83" />
+      <entry key="S10" value="4.2864401070780976E-42" />
+      <entry key="S30" value="1.6244222144150988E-14" />
+      <entry key="S60" value="1.274528232098097E-7" />
+      <entry key="M2" value="3.5700535459543106E-4" />
+      <entry key="M5" value="0.0417897614445624" />
+      <entry key="M10" value="0.20442544226334072" />
+      <entry key="M15" value="0.34702169814116773" />
+      <entry key="M30" value="0.5890854760908374" />
+      <entry key="H1" value="0.767519039562431" />
+      <entry key="H2" value="0.8760816397816077" />
+      <entry key="H4" value="0.9359923289117313" />
+      <entry key="D1" value="0.9890358825617858" />
+      <entry key="W1" value="0.9984262872497919" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.8675383479340437" />
+      <entry key="MS500" value="3.569040737262841" />
+      <entry key="S2" value="6.3209579946266725" />
+      <entry key="S5" value="11.700123132707766" />
+      <entry key="S10" value="18.360763446121144" />
+      <entry key="S30" value="27.95388955557973" />
+      <entry key="S60" value="31.6040790400205" />
+      <entry key="M2" value="33.72457165245393" />
+      <entry key="M5" value="37.12538557895149" />
+      <entry key="M10" value="45.958143725379315" />
+      <entry key="M15" value="53.69220184226508" />
+      <entry key="M30" value="66.99840899867225" />
+      <entry key="H1" value="76.93058163340704" />
+      <entry key="H2" value="83.01698120263718" />
+      <entry key="H4" value="86.38851171163878" />
+      <entry key="D1" value="89.38070527995279" />
+      <entry key="W1" value="89.9110940288284" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/bia/Desktop/Coffee-Chain-Application",
     "node.js.selected.package.tslint": "(autodetect)",
