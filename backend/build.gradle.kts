@@ -17,6 +17,9 @@ dependencies {
     implementation("org.mindrot:jbcrypt:0.4")
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
+    implementation("io.javalin:javalin:6.1.3")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
+    implementation("org.slf4j:slf4j-simple:2.0.12")
 }
 
 tasks.test {
