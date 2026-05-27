@@ -17,6 +17,7 @@ dependencies {
     implementation("org.mindrot:jbcrypt:0.4")
     implementation("io.javalin:javalin:6.1.3")
     implementation("org.slf4j:slf4j-simple:2.0.13")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
 }
