@@ -2,46 +2,47 @@ package com.coffeechain;
 
 import com.coffeechain.controllers.LoginRequest;
 import com.coffeechain.models.User;
+import com.coffeechain.repositories.UserRepository;
+import com.coffeechain.utils.DatabaseManager;
 import io.javalin.Javalin;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Main {
-    //fake database for now
-    private static Map<String, User> mockDatabase = new HashMap<>();
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create(config-> config.bundledPlugins.enableCors(cors-> cors.addRule(it-> it.anyHost()))).start(7070);
+        System.out.println("Starting Coffee Chain Application...");
+
+        DatabaseManager.initializeDatabase();
+        UserRepository userRepository = new UserRepository();
+
+        Javalin app = Javalin.create(config ->
+                config.bundledPlugins.enableCors(cors -> cors.addRule(it -> it.anyHost()))
+        ).start(7070);
 
         System.out.println("API Server is running at http://localhost:7070");
 
         app.post("/api/register", ctx -> {
             User newUser = ctx.bodyAsClass(User.class);
 
-            if(mockDatabase.containsKey(newUser.getUsername())){
-                ctx.status(400).result("Username already exists");
-            }
-            else
-            {
-                mockDatabase.put(newUser.getUsername(), newUser);
+            boolean success = userRepository.insertUser(newUser);
+
+            if (!success) {
+                ctx.status(400).result("Registration failed. Username might already exist.");
+            } else {
                 ctx.status(201).result("User registered successfully");
-                System.out.println("New user registered: " + newUser.getUsername());
+                System.out.println("New user registered in DB: " + newUser.getUsername());
             }
         });
 
         app.post("/api/login", ctx -> {
             LoginRequest loginRequest = ctx.bodyAsClass(LoginRequest.class);
 
-            User foundUser = mockDatabase.get(loginRequest.getUsername());
+            User foundUser = userRepository.findByUsername(loginRequest.getUsername());
 
-            if(foundUser == null || !foundUser.getPassword().equals(loginRequest.getPassword())) {
+            if (foundUser == null || !foundUser.getPassword().equals(loginRequest.getPassword())) {
                 ctx.status(401).result("Invalid username or password");
-            }
-            else
-            {
+            } else {
                 ctx.status(200).json(foundUser);
-                System.out.println("User logged in "+foundUser.getUsername());
+                System.out.println("User logged in: " + foundUser.getUsername());
             }
         });
     }
