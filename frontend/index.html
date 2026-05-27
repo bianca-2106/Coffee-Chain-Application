@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Coffee Chain App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Welcome to the Coffee Chain!</h1>
-<p>Please log in as a Customer or Manager.</p>
+<div class="container">
+    <div id="login-view" class="view active">
+        <h2>Welcome Back!</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
+    </div>
+
+    <div id="register-view" class="view">
+        <h2>Create an Account</h2>
+        <form id="register-form">
+            <select id="reg-role" required>
+                <option value="" disabled selected>Select Role...</option>
+                <option value="client">Customer</option>
+                <option value="manager">Manager</option>
+            </select>
+            <input type="text" id="reg-username" placeholder="Username" required>
+            <input type="password" id="reg-password" placeholder="Password" required>
+            <input type="text" id="reg-fullname" placeholder="Full Name" required>
+            <input type="text" id="reg-address" placeholder="Address" required>
+            <input type="text" id="reg-phone" placeholder="Phone Number" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" id="show-login">Log in here</a></p>
+    </div>
+</div>
+
+<script src="renderer.js"></script>
 </body>
 </html>
