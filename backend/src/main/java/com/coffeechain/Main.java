@@ -29,5 +29,20 @@ public class Main {
                 System.out.println("New user registered: " + newUser.getUsername());
             }
         });
+
+        app.post("/api/login", ctx -> {
+            LoginRequest loginRequest = ctx.bodyAsClass(LoginRequest.class);
+
+            User foundUser = mockDatabase.get(loginRequest.getUsername());
+
+            if(foundUser == null || !foundUser.getPassword().equals(loginRequest.getPassword())) {
+                ctx.status(401).result("Invalid username or password");
+            }
+            else
+            {
+                ctx.status(200).json(foundUser);
+                System.out.println("User logged in "+foundUser.getUsername());
+            }
+        });
     }
 }
